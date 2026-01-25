@@ -83,7 +83,7 @@ static QColor getContourColors(int meshNumber, int i) {
 		case 0: return QColor(179, 179, 179); // Light grey
 		case 1: return QColor(134, 208, 253); // Light Blue
 		case 2: return QColor(29, 80, 158); // Dark Blue
-		defalut: break;
+		default: break;
 	}
 	return QColor(179, 179, 179); // Light grey
 }

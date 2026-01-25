@@ -80,11 +80,14 @@ add_executable(meshlab WIN32 MACOSX_BUNDLE
 	${SOURCES} ${HEADERS} ${RESOURCES}
 	${UI})
 
-target_compile_definitions(meshlab PUBLIC QT_DISABLE_DEPRECATED_BEFORE=0x000000)
+# Use QtScript instead of QML for LimeReport (simpler dependency)
+target_compile_definitions(meshlab PUBLIC 
+	QT_DISABLE_DEPRECATED_BEFORE=0x000000
+	USE_QTSCRIPTENGINE)
 target_include_directories(meshlab PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(
 	meshlab
-	PUBLIC meshlab-common OpenGL::GLU Qt5::Network
+	PUBLIC meshlab-common OpenGL::GLU Qt5::Network Qt5::Script
 	)
 
 set_property(TARGET meshlab PROPERTY FOLDER Core)
