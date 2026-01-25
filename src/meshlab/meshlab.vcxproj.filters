@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dialogs\about_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="additionalgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\congrats_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vcglib\wrap\gui\coordinateframe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\filter_script_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glarea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glarea_setting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="layerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow_Init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow_RunTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ml_default_decorators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ml_render_gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ml_rendering_actions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ml_std_par_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multiViewer_Container.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\options_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\plugin_info_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rich_parameter_gui\richparameterlistdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rich_parameter_gui\richparameterlistframe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rich_parameter_gui\richparameterwidgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\save_mesh_attributes_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\save_snapshot_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\setting_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vcglib\wrap\gui\trackball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vcglib\wrap\gui\trackmode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="dialogs\about_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="additionalgui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dialogs\congrats_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dialogs\filter_script_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="glarea.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="glarea_setting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="layerDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="ml_default_decorators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="ml_render_gui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ml_rendering_actions.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ml_std_par_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="multiViewer_Container.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dialogs\options_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dialogs\plugin_info_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="rich_parameter_gui\richparameterlistdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="rich_parameter_gui\richparameterlistframe.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="rich_parameter_gui\richparameterwidgets.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dialogs\save_mesh_attributes_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dialogs\save_snapshot_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dialogs\setting_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="snapshotsetting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vcglib\wrap\gui\trackball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vcglib\wrap\gui\trackmode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vcglib\wrap\gl\trimesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="dialogs\about_dialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dialogs\congrats_dialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dialogs\filter_script_dialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\layerDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dialogs\plugin_info_dialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dialogs\save_mesh_attributes_dialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dialogs\save_snapshot_dialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="dialogs\sliceDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\stepicon\0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\00.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\01.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\02.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\03.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\04.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\05.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\06.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\07.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\08.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\09.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\5.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\6.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\7.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\8.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stepicon\9.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\backlines.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\bbox.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\border.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\compare.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\dummy.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\email-icon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\eye48.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\eye_256_splash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\face_color.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\facebook.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\flat.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\github-icon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\import_mesh.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\info.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\layer_edit_locked.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\layer_edit_unlocked.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\layer_eye_close.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\layer_eye_open.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\layers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\lightoff.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\lighton.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\logo_aimatshape.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\logo_epoch.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\logo_epoch_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="meshlab.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="images\meshlabLogo_256x256.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\new_project.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\no_edit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\ok.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\onscreenHelp.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\open.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\open_project.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\options.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cursors\plain.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cursors\plain_pan.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cursors\plain_pick.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cursors\plain_trackball.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cursors\plain_zoom.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\points.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\reload.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\reload_all.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\save.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\search.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\selected.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\slice.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\smooth.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\snapshot.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\splitH.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\splitV.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\stop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\text_color.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\textures.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\vert_color.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\view_back.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\view_front.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\view_left.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\view_raster.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\view_right.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\view_top.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\wire.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="meshlab.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\TalentLandLogo48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\growthChartBoys.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\growthChartGirls.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\severityChart.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

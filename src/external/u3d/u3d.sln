@@ -1,0 +1,55 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IFXCoreStatic", "C:/bcat-main/src/external/u3d/IFXCoreStatic\IFXCoreStatic.vcxproj", "{123E584E-4355-3FFF-87BB-06289BCC3CB1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IFXCore", "C:/bcat-main/src/external/u3d/IFXCore\IFXCore.vcxproj", "{84310830-1193-31CB-BB16-5C6AF415AE21}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IFXExporting", "C:/bcat-main/src/external/u3d/IFXExporting\IFXExporting.vcxproj", "{26F16DBE-5A8B-34ED-A93D-EA8D28C863FB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{84310830-1193-31CB-BB16-5C6AF415AE21} = {84310830-1193-31CB-BB16-5C6AF415AE21}
+		{84310830-1193-31CB-BB16-5C6AF415AE21} = {84310830-1193-31CB-BB16-5C6AF415AE21}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IFXScheduling", "C:/bcat-main/src/external/u3d/IFXScheduling\IFXScheduling.vcxproj", "{1111C038-D1FD-3060-8C66-261033B229E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{84310830-1193-31CB-BB16-5C6AF415AE21} = {84310830-1193-31CB-BB16-5C6AF415AE21}
+		{84310830-1193-31CB-BB16-5C6AF415AE21} = {84310830-1193-31CB-BB16-5C6AF415AE21}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IDTFConverter", "C:/bcat-main/src/external/u3d/IDTFConverter\IDTFConverter.vcxproj", "{CE8FACE3-1C30-3E03-90BB-BCF4015A02F5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{123E584E-4355-3FFF-87BB-06289BCC3CB1} = {123E584E-4355-3FFF-87BB-06289BCC3CB1}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{123E584E-4355-3FFF-87BB-06289BCC3CB1}.Debug|x64.ActiveCfg = Debug|x64
+		{123E584E-4355-3FFF-87BB-06289BCC3CB1}.Debug|x64.Build.0 = Debug|x64
+		{123E584E-4355-3FFF-87BB-06289BCC3CB1}.Release|x64.ActiveCfg = Release|x64
+		{123E584E-4355-3FFF-87BB-06289BCC3CB1}.Release|x64.Build.0 = Release|x64
+		{84310830-1193-31CB-BB16-5C6AF415AE21}.Debug|x64.ActiveCfg = Debug|x64
+		{84310830-1193-31CB-BB16-5C6AF415AE21}.Debug|x64.Build.0 = Debug|x64
+		{84310830-1193-31CB-BB16-5C6AF415AE21}.Release|x64.ActiveCfg = Release|x64
+		{84310830-1193-31CB-BB16-5C6AF415AE21}.Release|x64.Build.0 = Release|x64
+		{26F16DBE-5A8B-34ED-A93D-EA8D28C863FB}.Debug|x64.ActiveCfg = Debug|x64
+		{26F16DBE-5A8B-34ED-A93D-EA8D28C863FB}.Debug|x64.Build.0 = Debug|x64
+		{26F16DBE-5A8B-34ED-A93D-EA8D28C863FB}.Release|x64.ActiveCfg = Release|x64
+		{26F16DBE-5A8B-34ED-A93D-EA8D28C863FB}.Release|x64.Build.0 = Release|x64
+		{1111C038-D1FD-3060-8C66-261033B229E4}.Debug|x64.ActiveCfg = Debug|x64
+		{1111C038-D1FD-3060-8C66-261033B229E4}.Debug|x64.Build.0 = Debug|x64
+		{1111C038-D1FD-3060-8C66-261033B229E4}.Release|x64.ActiveCfg = Release|x64
+		{1111C038-D1FD-3060-8C66-261033B229E4}.Release|x64.Build.0 = Release|x64
+		{CE8FACE3-1C30-3E03-90BB-BCF4015A02F5}.Debug|x64.ActiveCfg = Debug|x64
+		{CE8FACE3-1C30-3E03-90BB-BCF4015A02F5}.Debug|x64.Build.0 = Debug|x64
+		{CE8FACE3-1C30-3E03-90BB-BCF4015A02F5}.Release|x64.ActiveCfg = Release|x64
+		{CE8FACE3-1C30-3E03-90BB-BCF4015A02F5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

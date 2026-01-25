@@ -1,0 +1,44 @@
+-IC:/QT/QT5.14.2/5.14.2/MSVC2017_64/mkspecs/win32-msvc
+-IC:/bcat-main/src/external/u3d/IFXCore
+-IC:/bcat-main/src/external/u3d/src/RTL/Dependencies/zlib
+-IC:/bcat-main/src/external/u3d/src/RTL/Dependencies/png
+-IC:/bcat-main/src/external/u3d/src/RTL/Dependencies/jpeg
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Include
+-IC:/bcat-main/src/external/u3d/src/RTL/Kernel/Include
+-IC:/bcat-main/src/external/u3d/src/RTL/Platform/Include
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Base
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/BitStream
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Bones
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/BoundHierarchy
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/CLODAuthor
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Common
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Generators/CLOD
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Generators/Glyph2D
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Generators/LineSet
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Generators/PointSet
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Mesh
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/ModifierChain
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Palette
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Rendering
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/SceneGraph
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Shaders
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Subdiv
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/Texture
+-IC:/bcat-main/src/external/u3d/src/RTL/Component/UVGenerator
+-IC:/bcat-main/src/external/u3d/src/RTL/Kernel/IFXCom
+-IC:/bcat-main/src/external/u3d/src/RTL/Kernel/Common
+-IC:/bcat-main/src/external/u3d/src/RTL/Dependencies/FNVHash
+-IC:/bcat-main/src/external/u3d/src/RTL/Dependencies/Predicates
+-IC:/bcat-main/src/external/u3d/src/RTL/Dependencies/WildCards
+-IC:/QT/QT5.14.2/5.14.2/MSVC2017_64/include
+-IC:/QT/QT5.14.2/5.14.2/MSVC2017_64/include/QtGui
+-IC:/QT/QT5.14.2/5.14.2/MSVC2017_64/include/QtANGLE
+-IC:/QT/QT5.14.2/5.14.2/MSVC2017_64/include/QtCore
+-IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include
+-IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include
+-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt

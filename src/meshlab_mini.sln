@@ -1,0 +1,115 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "meshlab", "meshlab\meshlab.vcxproj", "{EDC54BBE-DA8F-3E9C-9ABA-86ED743F7C7B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "meshlab-common", "common\meshlab-common.vcxproj", "{FE55E266-2FD7-3D80-A703-27A05EBF33E7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "io_base", "meshlabplugins\io_base\io_base.vcxproj", "{5631D688-74E8-30EF-8122-6A8C8606B002}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "decorate_base", "meshlabplugins\decorate_base\decorate_base.vcxproj", "{C023EB50-2EB0-3B21-A7B6-FABB1E62FF8F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filter_measure", "meshlabplugins\filter_measure\filter_measure.vcxproj", "{EC04E302-8979-303D-B7A4-6AB5AEF23D41}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filter_meshing", "meshlabplugins\filter_meshing\filter_meshing.vcxproj", "{12F21CA6-CBEB-3D43-B087-130466217DBF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "edit_measure", "meshlabplugins\edit_measure\edit_measure.vcxproj", "{95EC2DD1-1ACD-37BC-9D5B-8F43209A43DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "edit_pickpoints", "meshlabplugins\edit_pickpoints\edit_pickpoints.vcxproj", "{5770FB70-89CD-32B2-8C68-7EF345595468}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "edit_select", "meshlabplugins\edit_select\edit_select.vcxproj", "{B7D190D6-54D2-3AEB-8DC4-D4F93E7A48F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "render_orthosis", "meshlabplugins\render_orthosis\render_orthosis.vcxproj", "{D53CA16C-1CBE-49B1-96C3-4490524645C9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "edit_main", "meshlabplugins\edit_mainplugin\edit_main.vcxproj", "{432041C3-EB07-3644-AB95-76B6361D59C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7} = {FE55E266-2FD7-3D80-A703-27A05EBF33E7}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7}.Debug|x64.ActiveCfg = Debug|x64
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7}.Debug|x64.Build.0 = Debug|x64
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7}.Release|x64.ActiveCfg = Release|x64
+		{FE55E266-2FD7-3D80-A703-27A05EBF33E7}.Release|x64.Build.0 = Release|x64
+		{EDC54BBE-DA8F-3E9C-9ABA-86ED743F7C7B}.Debug|x64.ActiveCfg = Debug|x64
+		{EDC54BBE-DA8F-3E9C-9ABA-86ED743F7C7B}.Debug|x64.Build.0 = Debug|x64
+		{EDC54BBE-DA8F-3E9C-9ABA-86ED743F7C7B}.Release|x64.ActiveCfg = Release|x64
+		{EDC54BBE-DA8F-3E9C-9ABA-86ED743F7C7B}.Release|x64.Build.0 = Release|x64
+		{5631D688-74E8-30EF-8122-6A8C8606B002}.Debug|x64.ActiveCfg = Debug|x64
+		{5631D688-74E8-30EF-8122-6A8C8606B002}.Debug|x64.Build.0 = Debug|x64
+		{5631D688-74E8-30EF-8122-6A8C8606B002}.Release|x64.ActiveCfg = Release|x64
+		{5631D688-74E8-30EF-8122-6A8C8606B002}.Release|x64.Build.0 = Release|x64
+		{C023EB50-2EB0-3B21-A7B6-FABB1E62FF8F}.Debug|x64.ActiveCfg = Debug|x64
+		{C023EB50-2EB0-3B21-A7B6-FABB1E62FF8F}.Debug|x64.Build.0 = Debug|x64
+		{C023EB50-2EB0-3B21-A7B6-FABB1E62FF8F}.Release|x64.ActiveCfg = Release|x64
+		{C023EB50-2EB0-3B21-A7B6-FABB1E62FF8F}.Release|x64.Build.0 = Release|x64
+		{EC04E302-8979-303D-B7A4-6AB5AEF23D41}.Debug|x64.ActiveCfg = Debug|x64
+		{EC04E302-8979-303D-B7A4-6AB5AEF23D41}.Debug|x64.Build.0 = Debug|x64
+		{EC04E302-8979-303D-B7A4-6AB5AEF23D41}.Release|x64.ActiveCfg = Release|x64
+		{EC04E302-8979-303D-B7A4-6AB5AEF23D41}.Release|x64.Build.0 = Release|x64
+		{12F21CA6-CBEB-3D43-B087-130466217DBF}.Debug|x64.ActiveCfg = Debug|x64
+		{12F21CA6-CBEB-3D43-B087-130466217DBF}.Debug|x64.Build.0 = Debug|x64
+		{12F21CA6-CBEB-3D43-B087-130466217DBF}.Release|x64.ActiveCfg = Release|x64
+		{12F21CA6-CBEB-3D43-B087-130466217DBF}.Release|x64.Build.0 = Release|x64
+		{95EC2DD1-1ACD-37BC-9D5B-8F43209A43DB}.Debug|x64.ActiveCfg = Debug|x64
+		{95EC2DD1-1ACD-37BC-9D5B-8F43209A43DB}.Debug|x64.Build.0 = Debug|x64
+		{95EC2DD1-1ACD-37BC-9D5B-8F43209A43DB}.Release|x64.ActiveCfg = Release|x64
+		{95EC2DD1-1ACD-37BC-9D5B-8F43209A43DB}.Release|x64.Build.0 = Release|x64
+		{5770FB70-89CD-32B2-8C68-7EF345595468}.Debug|x64.ActiveCfg = Debug|x64
+		{5770FB70-89CD-32B2-8C68-7EF345595468}.Debug|x64.Build.0 = Debug|x64
+		{5770FB70-89CD-32B2-8C68-7EF345595468}.Release|x64.ActiveCfg = Release|x64
+		{5770FB70-89CD-32B2-8C68-7EF345595468}.Release|x64.Build.0 = Release|x64
+		{B7D190D6-54D2-3AEB-8DC4-D4F93E7A48F7}.Debug|x64.ActiveCfg = Debug|x64
+		{B7D190D6-54D2-3AEB-8DC4-D4F93E7A48F7}.Debug|x64.Build.0 = Debug|x64
+		{B7D190D6-54D2-3AEB-8DC4-D4F93E7A48F7}.Release|x64.ActiveCfg = Release|x64
+		{B7D190D6-54D2-3AEB-8DC4-D4F93E7A48F7}.Release|x64.Build.0 = Release|x64
+		{D53CA16C-1CBE-49B1-96C3-4490524645C9}.Debug|x64.ActiveCfg = Debug|x64
+		{D53CA16C-1CBE-49B1-96C3-4490524645C9}.Debug|x64.Build.0 = Debug|x64
+		{D53CA16C-1CBE-49B1-96C3-4490524645C9}.Release|x64.ActiveCfg = Release|x64
+		{D53CA16C-1CBE-49B1-96C3-4490524645C9}.Release|x64.Build.0 = Release|x64
+		{432041C3-EB07-3644-AB95-76B6361D59C6}.Debug|x64.ActiveCfg = Debug|x64
+		{432041C3-EB07-3644-AB95-76B6361D59C6}.Debug|x64.Build.0 = Debug|x64
+		{432041C3-EB07-3644-AB95-76B6361D59C6}.Release|x64.ActiveCfg = Release|x64
+		{432041C3-EB07-3644-AB95-76B6361D59C6}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = msvc2017_64
+		SolutionGuid = {8819B1EB-437A-41FB-8A02-A12E8633F171}
+	EndGlobalSection
+EndGlobal

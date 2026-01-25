@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{84310830-1193-31CB-BB16-5C6AF415AE21}</ProjectGuid>
+    <RootNamespace>IFXCore</RootNamespace>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>C:\bcat-main\distrib\lib\meshlab\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>IFXCore</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>C:\bcat-main\distrib\lib\meshlab\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>IFXCore</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\bcat-main\distrib\lib\meshlab\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">IFXCore</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\bcat-main\distrib\lib\meshlab\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">IFXCore</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\src\RTL\Dependencies\zlib;..\src\RTL\Dependencies\png;..\src\RTL\Dependencies\jpeg;..\src\RTL\Component\Include;..\src\RTL\Kernel\Include;..\src\RTL\Platform\Include;..\src\RTL\Component\Base;..\src\RTL\Component\BitStream;..\src\RTL\Component\Bones;..\src\RTL\Component\BoundHierarchy;..\src\RTL\Component\CLODAuthor;..\src\RTL\Component\Common;..\src\RTL\Component\Generators\CLOD;..\src\RTL\Component\Generators\Glyph2D;..\src\RTL\Component\Generators\LineSet;..\src\RTL\Component\Generators\PointSet;..\src\RTL\Component\Mesh;..\src\RTL\Component\ModifierChain;..\src\RTL\Component\Palette;..\src\RTL\Component\Rendering;..\src\RTL\Component\SceneGraph;..\src\RTL\Component\Shaders;..\src\RTL\Component\Subdiv;..\src\RTL\Component\Texture;..\src\RTL\Component\UVGenerator;..\src\RTL\Kernel\IFXCom;..\src\RTL\Kernel\Common;..\src\RTL\Dependencies\FNVHash;..\src\RTL\Dependencies\Predicates;..\src\RTL\Dependencies\WildCards;release;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <ModuleDefinitionFile>./../src/RTL/Platform/Win32/IFXCore/IFXCore.def</ModuleDefinitionFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\IFXCore.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\src\RTL\Dependencies\zlib;..\src\RTL\Dependencies\png;..\src\RTL\Dependencies\jpeg;..\src\RTL\Component\Include;..\src\RTL\Kernel\Include;..\src\RTL\Platform\Include;..\src\RTL\Component\Base;..\src\RTL\Component\BitStream;..\src\RTL\Component\Bones;..\src\RTL\Component\BoundHierarchy;..\src\RTL\Component\CLODAuthor;..\src\RTL\Component\Common;..\src\RTL\Component\Generators\CLOD;..\src\RTL\Component\Generators\Glyph2D;..\src\RTL\Component\Generators\LineSet;..\src\RTL\Component\Generators\PointSet;..\src\RTL\Component\Mesh;..\src\RTL\Component\ModifierChain;..\src\RTL\Component\Palette;..\src\RTL\Component\Rendering;..\src\RTL\Component\SceneGraph;..\src\RTL\Component\Shaders;..\src\RTL\Component\Subdiv;..\src\RTL\Component\Texture;..\src\RTL\Component\UVGenerator;..\src\RTL\Kernel\IFXCom;..\src\RTL\Kernel\Common;..\src\RTL\Dependencies\FNVHash;..\src\RTL\Dependencies\Predicates;..\src\RTL\Dependencies\WildCards;debug;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <ModuleDefinitionFile>./../src/RTL/Platform/Win32/IFXCore/IFXCore.def</ModuleDefinitionFile>
+      <OutputFile>$(OutDir)\IFXCore.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXAABBHierarchyBuilder.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\CIFXAnimationModifier.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\CIFXAuthorCLODGen.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\CLOD\CIFXAuthorCLODResource.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\LineSet\CIFXAuthorLineSet.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\LineSet\CIFXAuthorLineSetAnalyzer.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\LineSet\CIFXAuthorLineSetResource.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\CLOD\CIFXAuthorMesh.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\CIFXAuthorMeshMap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\CLOD\CIFXAuthorMeshScrub.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\PointSet\CIFXAuthorPointSet.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\PointSet\CIFXAuthorPointSetResource.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXAxisAlignedBBox.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXBTree.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXBTreeNode.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BitStream\CIFXBitStreamX.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\CIFXBoneWeightsModifier.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXBoundFace.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXBoundHierarchy.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXBoundSphereDataElement.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXBoundUtil.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\CLOD\CIFXCLODModifier.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXCollisionResult.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\IFXCom\CIFXComponentManager.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\Common\CIFXConnector.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXContour.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXContourExtruder.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXContourGenerator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXContourTessellator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\CIFXCoreServices.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\CIFXCoreServicesRef.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BitStream\CIFXDataBlockQueueX.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BitStream\CIFXDataBlockX.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXDevice.cpp" />
+    <ClCompile Include="..\src\RTL\Component\ModifierChain\CIFXDidRegistry.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXDummyModifier.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXFileReference.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\IFXCom\CIFXGUIDHashMap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXGlyph2DCommands.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXGlyph2DModifier.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXGlyph3DGenerator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXGlyphCommandList.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXGroup.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\CIFXHashMap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\CIFXIDManager.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Texture\CIFXImageTools.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Mesh\CIFXInterleavedData.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXLight.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXLightResource.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXLightSet.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXMarker.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXMaterialResource.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Mesh\CIFXMesh.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\CLOD\CIFXMeshCompiler.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Mesh\CIFXMeshGroup.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\CLOD\CIFXMeshMap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\CIFXMetaData.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXMixerConstruct.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXModel.cpp" />
+    <ClCompile Include="..\src\RTL\Component\ModifierChain\CIFXModifier.cpp" />
+    <ClCompile Include="..\src\RTL\Component\ModifierChain\CIFXModifierChain.cpp" />
+    <ClCompile Include="..\src\RTL\Component\ModifierChain\CIFXModifierDataElementIter.cpp" />
+    <ClCompile Include="..\src\RTL\Component\ModifierChain\CIFXModifierDataPacket.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXMotionResource.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\CIFXNameMap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Mesh\CIFXNeighborMesh.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXNode.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Palette\CIFXPalette.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\Common\CIFXPerformanceTimer.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXPickObject.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\IFXCom\CIFXPluginProxy.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXPrimitiveOverlap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\Glyph2D\CIFXQuadEdge.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Mesh\CIFXRenderable.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXResourceClient.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BoundHierarchy\CIFXResultAllocator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXSceneGraph.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\CIFXSetAdjacencyX.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\CIFXSetX.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Shaders\CIFXShader.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXShaderList.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Shaders\CIFXShaderLitTexture.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Shaders\CIFXShadingModifier.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXSimpleCollection.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\CIFXSimpleHash.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXSimpleList.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Palette\CIFXSimpleObject.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\CIFXSkeleton.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\CIFXSubdivModifier.cpp" />
+    <ClCompile Include="..\src\RTL\Component\ModifierChain\CIFXSubject.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Texture\CIFXTextureImageTools.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Texture\CIFXTextureObject.cpp" />
+    <ClCompile Include="..\src\RTL\Component\UVGenerator\CIFXUVGenerator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\UVGenerator\CIFXUVMapperCylindrical.cpp" />
+    <ClCompile Include="..\src\RTL\Component\UVGenerator\CIFXUVMapperNone.cpp" />
+    <ClCompile Include="..\src\RTL\Component\UVGenerator\CIFXUVMapperPlanar.cpp" />
+    <ClCompile Include="..\src\RTL\Component\UVGenerator\CIFXUVMapperReflection.cpp" />
+    <ClCompile Include="..\src\RTL\Component\UVGenerator\CIFXUVMapperSpherical.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXView.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\CIFXViewResource.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\CIFXVoidWrapper.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\CLODGenerator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\ContractionRecorder.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\Face.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXAttributeNeighborhood.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXBoneCacheArray.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXBoneNode.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXBonesManagerImpl.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXButterflyScheme.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\CLOD\IFXCLODManager.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXCharacter.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\Common\IFXCheckX.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Base\IFXCoincidentVertexMap.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\IFXCom\IFXCom.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\IFXComponentDescriptorList.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\IFXComponentIds.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXCoreArray.cpp" />
+    <ClCompile Include="..\src\RTL\Platform\Win32\IFXCore\IFXCoreDllMain.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXCoreList.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXCoreNode.cpp" />
+    <ClCompile Include="..\src\RTL\IFXCorePluginStatic\IFXCorePluginStatic.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Base\IFXCornerIter.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\Common\IFXDebug.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Common\IFXDids.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Base\IFXEuler.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Mesh\IFXFaceLists.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXFastAllocator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Base\IFXFatCornerIter.cpp" />
+    <ClCompile Include="..\src\RTL\Component\BitStream\IFXHistogramDynamic.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXKeyTrack.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXListNode.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXMatrix4x4.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\Memory\IFXMemory.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXMeshGroup_Character.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXMixerQueue.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXMixerQueueImpl.cpp" />
+    <ClCompile Include="..\src\RTL\Component\ModifierChain\IFXModifierChainState.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXMotion.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXMotionManagerImpl.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXMotionMixerImpl.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Generators\CLOD\IFXNeighborResController.cpp" />
+    <ClCompile Include="..\src\RTL\Platform\Win32\Common\IFXOSLoader.cpp" />
+    <ClCompile Include="..\src\RTL\Platform\Win32\Common\IFXOSRenderWindow.cpp" />
+    <ClCompile Include="..\src\RTL\Platform\Win32\Common\IFXOSUtilities.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXQuaternion.cpp" />
+    <ClCompile Include="..\src\RTL\Component\SceneGraph\IFXRenderPass.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXScreenSpaceMetric.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXSharedUnitAllocator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXSkin.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXSkin_p3.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXString.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXSubdivisionManager.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXTQTAddress.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXTQTAttribute.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXTQTBaseTriangle.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXTQTTriangle.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXTQTTriangleAllocator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Base\IFXTransform.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXUnitAllocator.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXVector3.cpp" />
+    <ClCompile Include="..\src\RTL\Kernel\DataTypes\IFXVector4.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Base\IFXVectorHasher.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Subdiv\IFXVertexAllocator.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Base\IFXVertexMap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Base\IFXVertexMapGroup.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXVertexWeight.cpp" />
+    <ClCompile Include="..\src\RTL\Component\Bones\IFXVertexWeights.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\Matrix4x4.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\NormalMap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\Pair.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\PairFinder.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\PairHash.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\PairHeap.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\Primitives.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\Vertex.cpp" />
+    <ClCompile Include="..\src\RTL\Component\CLODAuthor\VertexPairContractor.cpp" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\adler32.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\compress.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\crc32.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\deflate.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\gzclose.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\gzlib.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\gzread.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\gzwrite.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\infback.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\inffast.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\inflate.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\inftrees.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jaricom.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcapimin.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcapistd.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcarith.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jccoefct.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jccolor.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcdctmgr.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jchuff.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcinit.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcmainct.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcmarker.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcmaster.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcomapi.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcparam.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcprepct.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jcsample.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jctrans.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdapimin.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdapistd.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdarith.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdatadst.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdatasrc.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdcoefct.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdcolor.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jddctmgr.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdhuff.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdinput.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdmainct.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdmarker.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdmaster.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdmerge.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdpostct.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdsample.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jdtrans.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jerror.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jfdctflt.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jfdctfst.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jfdctint.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jidctflt.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jidctfst.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jidctint.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jmemmgr.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jmemnobs.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jquant1.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jquant2.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\jpeg\jutils.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\png.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngerror.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngget.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngmem.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngpread.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngread.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngrio.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngrtran.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngrutil.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngset.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngtrans.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngwio.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngwrite.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngwtran.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\png\pngwutil.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\Predicates\predicates.cpp" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\trees.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\uncompr.c" />
+    <ClCompile Include="..\src\RTL\Dependencies\WildCards\wcmatch.cpp" />
+    <ClCompile Include="..\src\RTL\Dependencies\zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\RTL\Platform\Win32\IFXCore\IFXResource.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\cderror.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\crc32.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\deflate.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\gzguts.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\inffast.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\inffixed.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\inflate.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\inftrees.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jconfig.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jdct.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jerror.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jinclude.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jmemsys.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jmorecfg.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jpegint.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jpeglib.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\jversion.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\png\png.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\png\pngconf.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\png\pnglibconf.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\jpeg\transupp.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\trees.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\zconf.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\zlib.h" />
+    <ClInclude Include="..\src\RTL\Dependencies\zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\bcat-main\src\external\u3d\src\RTL\Platform\Win32\IFXCore\IFXCore.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
