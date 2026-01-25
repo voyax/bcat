@@ -65,9 +65,12 @@ set(UI
 	dialogs/plugin_info_dialog.ui
 	dialogs/save_mesh_attributes_dialog.ui
 	dialogs/save_snapshot_dialog.ui
+	dialogs/sliceDialog.ui
 	ui/layerDialog.ui)
 
-set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/ui)
+set(CMAKE_AUTOUIC_SEARCH_PATHS 
+	${CMAKE_CURRENT_SOURCE_DIR}/ui
+	${CMAKE_CURRENT_SOURCE_DIR}/dialogs)
 
 if(WIN32)
 	list(APPEND SOURCES meshlab.rc)
