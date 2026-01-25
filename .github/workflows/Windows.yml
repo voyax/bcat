@@ -20,7 +20,7 @@ jobs:
       uses: jurplel/install-qt-action@v4
       with:
         version: '5.15.2'
-        modules: 'qtscript qtquickcontrols2'
+        modules: 'qtscript'
     - name: Setup env variables
       shell: bash
       id: envs
