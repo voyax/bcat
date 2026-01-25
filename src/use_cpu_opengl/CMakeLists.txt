@@ -8,6 +8,14 @@
 
 if(WIN32)
 
+# Check if opengl32.dll exists (Mesa3D software renderer)
+# This DLL is not included in the repo and must be obtained separately
+if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/opengl32.dll")
+	message(STATUS "use_cpu_opengl: opengl32.dll not found, skipping build")
+	message(STATUS "  To enable this component, download Mesa3D opengl32.dll to ${CMAKE_CURRENT_SOURCE_DIR}/")
+	return()
+endif()
+
 set(SOURCES
 	main.cpp
 )
