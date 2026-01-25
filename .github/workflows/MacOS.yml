@@ -12,7 +12,7 @@ jobs:
         precision: [single_precision, double_precision]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - name: Install dependencies
@@ -20,15 +20,17 @@ jobs:
         brew install libomp cgal xerces-c
         npm install -g appdmg
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v4
+      with:
+        version: '5.15.2'
     - name: Setup env variables
       id: envs
       shell: bash
       run: |
         if [ "${{matrix.precision}}" == "double_precision" ]; then
-          echo  ::set-output name=artifact_suffix::"_double"
+          echo "artifact_suffix=_double" >> $GITHUB_OUTPUT
         else
-          echo  ::set-output name=artifact_suffix::""
+          echo "artifact_suffix=" >> $GITHUB_OUTPUT
         fi
     - name: Configure and Build
       shell: bash
@@ -43,12 +45,12 @@ jobs:
       run: |
         bash scripts/${{ runner.os }}/3_dmg.sh
     - name: Upload MeshLab Portable
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: meshlab_macos_portable${{steps.envs.outputs.artifact_suffix}}
         path: src/install/MeshLab*.app
     - name: Upload DMG
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: meshlab_macos_dmg${{steps.envs.outputs.artifact_suffix}}
         path: src/install/MeshLab*.dmg

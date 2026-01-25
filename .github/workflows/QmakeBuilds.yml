@@ -5,24 +5,26 @@ on: [push, pull_request]
 jobs:
   ubuntu_build:
     name: Build MeshLab (Ubuntu - QMake)
-    runs-on: ubuntu-18.04 #in order to deploy, need to use oldest supported version
+    runs-on: ubuntu-22.04
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: true
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v4
+      with:
+        version: '5.15.2'
     - name: Install dependencies
       run: |
        sudo apt-get install -y mesa-common-dev libglu1-mesa-dev libglew-dev libeigen3-dev libgmp-dev
        sudo apt-get install -y libxkbcommon-x11-0 patchelf
        #needed by qt 5.15 on linux
-       sudo apt-get install libxcb-icccm4-dev libxcb-image0-dev libxcb-keysyms1-dev libxcb-render-util0-dev libxcb-xinerama0-dev
+       sudo apt-get install -y libxcb-icccm4-dev libxcb-image0-dev libxcb-keysyms1-dev libxcb-render-util0-dev libxcb-xinerama0-dev
     - name: Setup env variables
       id: envs
       run: |
-        echo  ::set-output name=date::"$(cat ML_VERSION)"
+        echo "date=$(cat ML_VERSION)" >> $GITHUB_OUTPUT
     - name: Build MeshLab
       run: |
         sh scripts/${{ runner.os }}/qmake/linux_build.sh
@@ -36,12 +38,12 @@ jobs:
       run : |
         sh scripts/${{ runner.os }}/qmake/linux_appimages.sh
     - name: Upload Meshlab Portable
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: meshlab_linux_portable
         path: distrib/
     - name: Upload Meshlab AppImage
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: meshlab_linux_appimage
         path: MeshLab${{steps.envs.outputs.date}}-linux.AppImage
@@ -51,7 +53,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: true
     - name: Install dependencies
@@ -59,12 +61,14 @@ jobs:
         brew install libomp
         npm install -g appdmg
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v4
+      with:
+        version: '5.15.2'
     - name: Setup env variables
       id: envs
       shell: bash
       run: |
-        echo  ::set-output name=date::"$(cat ML_VERSION)"
+        echo "date=$(cat ML_VERSION)" >> $GITHUB_OUTPUT
     - name: Build MeshLab
       run: |
         sh scripts/${{ runner.os }}/qmake/macos_build.sh
@@ -76,7 +80,7 @@ jobs:
          sh scripts/${{ runner.os }}/qmake/macos_dmg.sh
          mv distrib/MeshLab${{steps.envs.outputs.date}}.dmg distrib/MeshLab${{steps.envs.outputs.date}}-macos.dmg
     - name: Upload DMG
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: meshlab_macos_dmg
         path: distrib/MeshLab${{steps.envs.outputs.date}}-macos.dmg
