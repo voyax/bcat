@@ -25,7 +25,7 @@ find_package(OpenGL REQUIRED)
 
 find_package(
 	Qt5
-	COMPONENTS OpenGL Xml Network Script
+	COMPONENTS OpenGL Xml Network Script PrintSupport
 	REQUIRED)
 find_package(OpenMP)
 

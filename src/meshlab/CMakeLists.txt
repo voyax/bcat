@@ -87,7 +87,7 @@ target_compile_definitions(meshlab PUBLIC
 target_include_directories(meshlab PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(
 	meshlab
-	PUBLIC meshlab-common OpenGL::GLU Qt5::Network Qt5::Script
+	PUBLIC meshlab-common OpenGL::GLU Qt5::Network Qt5::Script Qt5::PrintSupport
 	)
 
 set_property(TARGET meshlab PROPERTY FOLDER Core)
