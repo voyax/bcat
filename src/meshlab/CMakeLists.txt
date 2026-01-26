@@ -80,15 +80,27 @@ add_executable(meshlab WIN32 MACOSX_BUNDLE
 	${SOURCES} ${HEADERS} ${RESOURCES}
 	${UI})
 
-# Use QtScript instead of QML for LimeReport (simpler dependency)
+# Base compile definitions
 target_compile_definitions(meshlab PUBLIC 
-	QT_DISABLE_DEPRECATED_BEFORE=0x000000
-	USE_QTSCRIPTENGINE)
+	QT_DISABLE_DEPRECATED_BEFORE=0x000000)
 target_include_directories(meshlab PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(
-	meshlab
-	PUBLIC meshlab-common OpenGL::GLU Qt5::Network Qt5::Script Qt5::PrintSupport
-	)
+
+# Base libraries
+target_link_libraries(meshlab
+	PUBLIC meshlab-common OpenGL::GLU Qt5::Network Qt5::PrintSupport
+)
+
+# LimeReport integration (optional)
+if(LIMEREPORT_FOUND)
+	message(STATUS "MeshLab: LimeReport support enabled")
+	target_compile_definitions(meshlab PUBLIC 
+		LIMEREPORT_ENABLED
+		USE_QTSCRIPTENGINE)
+	target_link_libraries(meshlab PUBLIC external-limereport Qt5::Script Qt5::Sql Qt5::Svg)
+	target_include_directories(meshlab PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../external/limeReport/include)
+else()
+	message(STATUS "MeshLab: LimeReport support disabled (library not found)")
+endif()
 
 set_property(TARGET meshlab PROPERTY FOLDER Core)
 if (APPLE)

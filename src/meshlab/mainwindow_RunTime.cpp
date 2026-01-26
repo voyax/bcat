@@ -60,11 +60,15 @@
 #include "dialogs/save_mesh_attributes_dialog.h"
 #include "dialogs/save_snapshot_dialog.h"
 
+#ifdef Q_OS_WIN
 #include "ActiveQt/qaxobject.h"
+#endif
 #include <QtCore/qmath.h>
 #include <QOpenGLWidget>
 
+#ifdef LIMEREPORT_ENABLED
 #include "external/limeReport/include/lrreportengine.h"
+#endif
 
 using namespace std;
 using namespace vcg;
@@ -3844,6 +3848,7 @@ void MainWindow::slotSnapshotViewHelper(QString view, QString model) {
 	qDebug() << "writing snapshot image:" << writer.write(corppedImage) << writer.errorString();
 }
 
+#ifdef LIMEREPORT_ENABLED
 void MainWindow::slotExportReport() {
 	slotExportReportHelper(false);
 }
@@ -4013,6 +4018,23 @@ void MainWindow::slotExportReportHelper(bool simplified) {
 	report->setResultEditable(false);
 	report->previewReport();
 }
+#else
+// LimeReport not available - provide stub implementations
+void MainWindow::slotExportReport() {
+	QMessageBox::warning(this, tr("Feature Not Available"), 
+		tr("Report export requires LimeReport library which is not available in this build."));
+}
+
+void MainWindow::slotExportReportLight() {
+	QMessageBox::warning(this, tr("Feature Not Available"), 
+		tr("Report export requires LimeReport library which is not available in this build."));
+}
+
+void MainWindow::slotExportReportHelper(bool simplified) {
+	Q_UNUSED(simplified);
+	// LimeReport not available
+}
+#endif // LIMEREPORT_ENABLED
 
 
 /*计算percentil 问题：
