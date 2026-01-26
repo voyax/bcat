@@ -3253,22 +3253,8 @@ void MainWindow::closeCurrentDocument()
 }
 
 void MainWindow::slotSliceEveryModel() {
-	//QList<QMdiSubWindow*> windows = mdiarea->subWindowList();
-	//int count = 0;
-	//foreach(QMdiSubWindow * w, windows)
-	//{
-	//	std::cout << "compute " <<count++ << " viewer"<< std::endl;
-	//	MultiViewer_Container* mulitview_container = static_cast<MultiViewer_Container*>(w->widget());
-	//	if (mulitview_container) {
-	//		MeshDocument& md = (mulitview_container->meshDoc);
-	//		for (typename MeshDocument::MeshIterator mit = md.meshBegin(); mit != md.meshEnd(); ++mit) {
-	//			qDebug() << mit->label();
-	//		}
-	//	}
-	//	else {
-	//		std::cout << "empty multiview_container \n";
-	//	}
-	//}
+	// Show the slice dock window with user info input and report generation
+	slotAddNewDockWidget(true);
 }
 
 void MainWindow::slotExportCsv() {
