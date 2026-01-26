@@ -30,7 +30,20 @@
 #include "helpers/mesh_document_state_data.h"
 #include <QtWidgets/qdockwidget.h>
 
-class MeshDocument : public QObject
+// Windows DLL export/import macro
+#ifndef ML_DLL_EXPORT
+#ifdef WIN32
+#ifdef ML_EXPORT_SYMBOLS
+#define ML_DLL_EXPORT Q_DECL_EXPORT
+#else
+#define ML_DLL_EXPORT Q_DECL_IMPORT
+#endif
+#else
+#define ML_DLL_EXPORT
+#endif
+#endif
+
+class ML_DLL_EXPORT MeshDocument : public QObject
 {
 	Q_OBJECT
 
@@ -235,7 +248,7 @@ signals:
 	void documentUpdated();
 	void updateDecorators(int mesh_id);
 
-	//将插件里面的dockwidget添加到MainWindow
+	//??????????dockwidget?????MainWindow
 	void addNewDockWidget(bool);
 
 public:
