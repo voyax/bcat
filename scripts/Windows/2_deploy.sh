@@ -30,8 +30,8 @@ windeployqt $INSTALL_PATH/plugins/filter_sketchfab.dll --libdir $INSTALL_PATH/
 
 mv $INSTALL_PATH/lib/meshlab/IFX* $INSTALL_PATH
 cp $INSTALL_PATH/IFXCoreStatic.lib $INSTALL_PATH/lib/meshlab/
-cp $DISTRIB_PATH/LICENSE.txt $INSTALL_PATH/
-cp $DISTRIB_PATH/privacy.txt $INSTALL_PATH/
+cp $SCRIPTS_PATH/../../LICENSE.txt $INSTALL_PATH/
+cp $SCRIPTS_PATH/../../docs/privacy.txt $INSTALL_PATH/
 
 #at this point, distrib folder contains all the files necessary to execute meshlab
 echo "$INSTALL_PATH is now a self contained meshlab application"
