@@ -41,6 +41,7 @@
 #include <QTextCursor>
 #include <QtGui/QImageWriter>
 #include <QtGui/QImageReader>
+#include <QPainterPath>
 
 #include <common/mlapplication.h>
 #include <common/filterscript.h>
