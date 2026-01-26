@@ -82,7 +82,8 @@ set(HEADERS
 	ml_thread_safe_memory_info.h
 	mlapplication.h
 	mlexception.h
-	searcher.h)
+	searcher.h
+	pluginCommonData.h)
 
 set(SOURCES
 	ml_document/helpers/mesh_document_state_data.cpp
@@ -122,7 +123,8 @@ set(SOURCES
 	ml_selection_buffers.cpp
 	ml_thread_safe_memory_info.cpp
 	mlapplication.cpp
-	searcher.cpp)
+	searcher.cpp
+	pluginCommonData.cpp)
 
 set(RESOURCES meshlab-common.qrc)
 
