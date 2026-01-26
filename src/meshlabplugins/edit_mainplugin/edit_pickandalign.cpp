@@ -1,4 +1,4 @@
-﻿/****************************************************************************
+/****************************************************************************
  * MeshLab                                                           o o     *
  * A versatile mesh processing toolbox                             o     o   *
  *                                                                _   O  _   *
@@ -327,7 +327,9 @@ void PickAndAlignEditPlugin::slotTransModel(double d)
 		valueChangedSlider->setValue(intValue); // 在这里加上0.0001 防止double到int转换时由于精度损失出现问题
 
 		mat.SetTranslate(axis * transDis);
-		md->mm()->cm.Tr = mat * md->mm()->cm.Tr;
+		Matrix44m matM;
+		matM.Import(mat);
+		md->mm()->cm.Tr = matM * md->mm()->cm.Tr;
 
 		// 更新特征点
 		for (int i = 0; i < md->mm()->featurePoints.size(); ++i) {
@@ -380,7 +382,9 @@ void PickAndAlignEditPlugin::slotRotateModel(double g)
 		valueChangedSlider->setValue(intValue);
 
 		mat.SetRotateDeg(roateDegree, axis);
-		md->mm()->cm.Tr = mat * md->mm()->cm.Tr;
+		Matrix44m matM;
+		matM.Import(mat);
+		md->mm()->cm.Tr = matM * md->mm()->cm.Tr;
 
 		// 更新特征点
 		for (int i = 0; i < md->mm()->featurePoints.size(); ++i) {
@@ -434,7 +438,9 @@ void PickAndAlignEditPlugin::slotTransModel(int i)
 
 		// 移动模型
 		mat.SetTranslate(axis * transDis);
-		md->mm()->cm.Tr = mat * md->mm()->cm.Tr;
+		Matrix44m matM;
+		matM.Import(mat);
+		md->mm()->cm.Tr = matM * md->mm()->cm.Tr;
 
 		// 更新特征点
 		for (int i = 0; i < md->mm()->featurePoints.size(); ++i) {
@@ -487,7 +493,9 @@ void PickAndAlignEditPlugin::slotRotateModel(int g)
 
 		//更新模型位置
 		mat.SetRotateDeg(roateDegree, axis);
-		md->mm()->cm.Tr = mat * md->mm()->cm.Tr;
+		Matrix44m matM;
+		matM.Import(mat);
+		md->mm()->cm.Tr = matM * md->mm()->cm.Tr;
 
 		// 更新特征点
 		for (int i = 0; i < md->mm()->featurePoints.size(); ++i) {
@@ -553,7 +561,8 @@ void PickAndAlignEditPlugin::slotAlignModel() {
 	}
 
 	//先将feature点恢复到原始位置
-	vcg::Matrix44f inverseTr = vcg::Inverse(md->mm()->cm.Tr);
+	vcg::Matrix44f inverseTr;
+	inverseTr.Import(vcg::Inverse(md->mm()->cm.Tr));
 	for (int i = 0; i < md->mm()->featurePoints.size(); ++i) {
 		md->mm()->featurePoints[i] = inverseTr * md->mm()->featurePoints[i];
 	}
@@ -599,7 +608,7 @@ void PickAndAlignEditPlugin::slotAlignModel() {
 
 	rotateM = vcg::Inverse(rotateM);	
 	transFormMatrix = rotateM * transM;
-	md->mm()->cm.Tr = transFormMatrix;
+	md->mm()->cm.Tr.Import(transFormMatrix);
 
 	//更新模型点的位置
 	//tri::UpdatePosition<CMeshO>::Matrix(originMesh->cm, transFormMatrix, true);
