@@ -191,6 +191,7 @@ if(NOT DEFINED MESHLAB_PLUGINS) # it may be already defined in parent directory
 
 			# Rendering and Decoration Plugins
 			meshlabplugins/render_gdp
+			meshlabplugins/render_orthosis
 			meshlabplugins/render_radiance_scaling
 			meshlabplugins/decorate_base
 			meshlabplugins/decorate_background
@@ -200,6 +201,7 @@ if(NOT DEFINED MESHLAB_PLUGINS) # it may be already defined in parent directory
 			# Edit Plugins
 			meshlabplugins/edit_sample
 			meshlabplugins/edit_align
+			meshlabplugins/edit_mainplugin
 			meshlabplugins/edit_manipulators
 			meshlabplugins/edit_measure
 			meshlabplugins/edit_mutualcorrs

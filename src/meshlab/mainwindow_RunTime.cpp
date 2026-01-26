@@ -3253,6 +3253,22 @@ void MainWindow::closeCurrentDocument()
 }
 
 void MainWindow::slotSliceEveryModel() {
+	// Check if mesh document and current mesh exist
+	if (meshDoc() == nullptr || meshDoc()->mm() == nullptr) {
+		QMessageBox::warning(this, tr("No Model Loaded"), 
+			tr("Please load a model first before using the Slice function."));
+		return;
+	}
+	
+	// Check if slice data has been computed (pointsFromLevel0to10 must be populated)
+	if (meshDoc()->mm()->pointsFromLevel0to10 == nullptr || 
+	    meshDoc()->mm()->pointsFromLevel0to10->size() != 10 ||
+	    (*meshDoc()->mm()->pointsFromLevel0to10)[0].empty()) {
+		QMessageBox::warning(this, tr("Slice Data Not Ready"), 
+			tr("Please perform cranial analysis first (use the Edit tool to analyze the model) before viewing slice data."));
+		return;
+	}
+	
 	// Show the slice dock window with user info input and report generation
 	slotAddNewDockWidget(true);
 }
