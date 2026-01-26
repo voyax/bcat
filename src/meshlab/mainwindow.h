@@ -582,7 +582,7 @@ private:
 	QAction *trackballStepSM;
 
 	///////////Actions Menu Windows -> Slice ////////////////////////
-	//QAction* sliceEveryModel;
+	QAction* sliceEveryModel;
 	QAction* compareModels;
 
 	///////////Actions Menu Windows -> Link/Copy/Paste View ////////////////////////

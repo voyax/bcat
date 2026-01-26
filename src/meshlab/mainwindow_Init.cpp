@@ -230,8 +230,8 @@ void MainWindow::createActions()
 	connect(saveSnapshotAct, SIGNAL(triggered()), this, SLOT(saveSnapshot()));
 
 	////slice Action
-	//sliceEveryModel = new QAction(QIcon(":/images/slice.png"), tr("Slice every model"), this);
-	//connect(sliceEveryModel, SIGNAL(triggered()), this, SLOT(slotSliceEveryModel()));
+	sliceEveryModel = new QAction(QIcon(":/images/slice.png"), tr("Slice every model"), this);
+	connect(sliceEveryModel, SIGNAL(triggered()), this, SLOT(slotSliceEveryModel()));
 	compareModels = new QAction(QIcon(":/images/compare.png"), tr("Compare models of different treatment stages"), this);
 	connect(compareModels, SIGNAL(triggered()), this, SLOT(slotCompareModel()));
 
@@ -535,6 +535,7 @@ void MainWindow::createToolBars()
 	}
 
 	mainToolBar->addSeparator();
+	mainToolBar->addAction(sliceEveryModel);
 	mainToolBar->addAction(compareModels);
 
 	editToolBar = addToolBar(tr("Edit"));
