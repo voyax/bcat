@@ -1,7 +1,8 @@
 name: MacOS
 
+# Disabled auto-trigger, use workflow_dispatch for manual runs
 on:
-  [push, pull_request]
+  workflow_dispatch:
 
 jobs:
   macos_build:

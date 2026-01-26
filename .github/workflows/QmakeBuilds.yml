@@ -1,6 +1,8 @@
 name: Qmake builds
 
-on: [push, pull_request]
+# Disabled auto-trigger, use workflow_dispatch for manual runs
+on:
+  workflow_dispatch:
 
 jobs:
   ubuntu_build:
