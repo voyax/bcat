@@ -50,6 +50,9 @@ jobs:
       shell: bash
       run: |
         bash scripts/${{ runner.os }}/resources/nsis_script.sh
+    - name: Install NSIS
+      run: |
+        choco install nsis -y
     - name: Create Installer
       uses: joncloud/makensis-action@v4
       with:
