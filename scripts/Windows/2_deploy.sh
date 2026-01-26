@@ -26,10 +26,20 @@ done
 
 windeployqt $INSTALL_PATH/meshlab.exe
 
-windeployqt $INSTALL_PATH/plugins/filter_sketchfab.dll --libdir $INSTALL_PATH/
+# Deploy filter_sketchfab if it exists
+if [ -f "$INSTALL_PATH/plugins/filter_sketchfab.dll" ]; then
+    windeployqt $INSTALL_PATH/plugins/filter_sketchfab.dll --libdir $INSTALL_PATH/
+fi
 
-mv $INSTALL_PATH/lib/meshlab/IFX* $INSTALL_PATH
-cp $INSTALL_PATH/IFXCoreStatic.lib $INSTALL_PATH/lib/meshlab/
+# Move IFX files if they exist (from u3d library)
+if ls $INSTALL_PATH/lib/meshlab/IFX* 1> /dev/null 2>&1; then
+    mv $INSTALL_PATH/lib/meshlab/IFX* $INSTALL_PATH
+fi
+
+# Copy IFXCoreStatic.lib if it exists
+if [ -f "$INSTALL_PATH/IFXCoreStatic.lib" ]; then
+    cp $INSTALL_PATH/IFXCoreStatic.lib $INSTALL_PATH/lib/meshlab/
+fi
 cp $SCRIPTS_PATH/../../LICENSE.txt $INSTALL_PATH/
 cp $SCRIPTS_PATH/../../docs/privacy.txt $INSTALL_PATH/
 
