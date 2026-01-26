@@ -119,6 +119,19 @@ if (APPLE)
 		FILE ${MESHLAB_BUILD_DISTRIB_DIR}/meshlab.app/Contents/Info.plist)
 endif()
 
+# Copy LimeReport templates to build directory
+if(LIMEREPORT_FOUND)
+	file(COPY 
+		${CMAKE_CURRENT_SOURCE_DIR}/TalentLandReport.lrxml
+		${CMAKE_CURRENT_SOURCE_DIR}/TalentLandReportLight.lrxml
+		DESTINATION ${MESHLAB_BUILD_DISTRIB_DIR})
+	install(FILES
+		${CMAKE_CURRENT_SOURCE_DIR}/TalentLandReport.lrxml
+		${CMAKE_CURRENT_SOURCE_DIR}/TalentLandReportLight.lrxml
+		DESTINATION ${MESHLAB_BIN_INSTALL_DIR}
+		COMPONENT MeshLab)
+endif()
+
 install(
 	TARGETS meshlab
 	DESTINATION ${MESHLAB_BIN_INSTALL_DIR}
