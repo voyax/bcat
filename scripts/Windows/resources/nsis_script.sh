@@ -30,7 +30,7 @@ done
 
 #get version
 IFS=' ' #space delimiter
-STR_VERSION=$($INSTALL_PATH/meshlab.exe --version)
+STR_VERSION=$($INSTALL_PATH/meshlab.exe --version | tr -d '\r')
 read -a strarr <<< "$STR_VERSION"
 ML_VERSION=${strarr[1]} #get the meshlab version from the string
 
