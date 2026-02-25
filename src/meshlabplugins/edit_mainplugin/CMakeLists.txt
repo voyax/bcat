@@ -5,6 +5,7 @@ set(SOURCES
 	edit_main_factory.cpp
 	edit_pickandalign.cpp
 	edit_slice.cpp
+	${VCGDIR}/wrap/gui/coordinateframe.cpp
 )
 
 set(HEADERS
