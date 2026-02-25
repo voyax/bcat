@@ -258,13 +258,14 @@ void SliceEditPlugin::computeASR_PSR()
 		headHeight = fabs(maxZ);
 	}
 
-	vcg::Point3f center(0.0, 0.0, 0.0);
-	vcg::Plane3f plane2, plane8, YOZ, XOZ;
+	typedef CMeshO::ScalarType S;
+	vcg::Point3<S> center(0.0, 0.0, 0.0);
+	vcg::Plane3<S> plane2, plane8, YOZ, XOZ;
 
-	plane2.Init(vcg::Point3f(0.0, 0.0, headHeight / 10.0 * 2), vcg::Point3f(0.0, 0.0, 1.0));
-	plane8.Init(vcg::Point3f(0.0, 0.0, headHeight / 10.0 * 8), vcg::Point3f(0.0, 0.0, 1.0));
-	YOZ.Init(center, vcg::Point3f(1.0, 0.0, 0.0));
-	XOZ.Init(center, vcg::Point3f(0.0, 1.0, 0.0));
+	plane2.Init(vcg::Point3<S>(0.0, 0.0, headHeight / 10.0 * 2), vcg::Point3<S>(0.0, 0.0, 1.0));
+	plane8.Init(vcg::Point3<S>(0.0, 0.0, headHeight / 10.0 * 8), vcg::Point3<S>(0.0, 0.0, 1.0));
+	YOZ.Init(center, vcg::Point3<S>(1.0, 0.0, 0.0));
+	XOZ.Init(center, vcg::Point3<S>(0.0, 1.0, 0.0));
 
 	divideMeshByPlane(&originMesh->cm, upMesh, underMesh, plane2, true, false);
 	divideMeshByPlane(upMesh, upMesh, underMesh, plane8, false, true);
@@ -363,7 +364,7 @@ void SliceEditPlugin::fillHole(CMeshO* currentMesh, vcg::Point3f direction)
 	tri::UpdateNormal<CMeshO>::PerVertexAngleWeighted(*currentMesh);
 }
 
-void SliceEditPlugin::divideMeshByPlane(CMeshO* source, CMeshO*& targetUp, CMeshO*& targetUnder, vcg::Plane3f slicingPlane, bool needUp, bool needUnder)
+void SliceEditPlugin::divideMeshByPlane(CMeshO* source, CMeshO*& targetUp, CMeshO*& targetUnder, vcg::Plane3<CMeshO::ScalarType> slicingPlane, bool needUp, bool needUnder)
 {
 	tri::QualityMidPointFunctor<CMeshO> slicingfunc(0.0);
 	tri::QualityEdgePredicate<CMeshO> slicingpred(0.0, 0.0);
@@ -442,14 +443,15 @@ void SliceEditPlugin::sliceModel() {
 		}
 	}
 
-	Point3f center = vcg::Point3f(0.0, 0.0, 0.0);//(data->featurePoints[0] + data->featurePoints[0] + data->featurePoints[0]) / 3.0
-	Point3f dir = Point3f(0.0, 0.0, 1.0);
-	Plane3f slicingPlane;
+	typedef CMeshO::ScalarType S;
+	Point3<S> center = vcg::Point3<S>(0.0, 0.0, 0.0);//(data->featurePoints[0] + data->featurePoints[0] + data->featurePoints[0]) / 3.0
+	Point3<S> dir = Point3<S>(0.0, 0.0, 1.0);
+	Plane3<S> slicingPlane;
 	double distance = fabs(maxZ - center.Z()) / 10.0;
 	headHeight = fabs(maxZ - center.Z());
 
 	for (int i = 0; i < 10; ++i) { //level10 只有一个点，忽略
-		Point3f offset = center + dir * distance * i;
+		Point3<S> offset = center + dir * distance * i;
 		slicingPlane.Init(offset, dir);
 
 		MeshModel* cap = new MeshModel(i, "", "");

@@ -42,11 +42,11 @@ private:
 
 private:
     void fillHole(CMeshO* m, vcg::Point3f direction);
-    //½«Ä£ÐÍÑØplane·Ö³ÉÉÏÏÂÁ½²¿·Ö
-    void divideMeshByPlane(CMeshO* source, CMeshO*& targetUp, CMeshO*& targetUnder, vcg::Plane3f slicingPlane, bool needUp = true, bool needUnder = true);
+    //ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½planeï¿½Ö³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    void divideMeshByPlane(CMeshO* source, CMeshO*& targetUp, CMeshO*& targetUnder, vcg::Plane3<CMeshO::ScalarType> slicingPlane, bool needUp = true, bool needUnder = true);
 
-    //Í·Â­Êý¾Ý²âÁ¿
-    void sliceModel(); //½«°ÚÕýµÄÍ·Â­ÓÃlevel0~level0 11¸öÆ½ÃæÇÐ·Ö³É10²¿·Ö
+    //Í·Â­ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½
+    void sliceModel(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·Â­ï¿½ï¿½level0~level0 11ï¿½ï¿½Æ½ï¿½ï¿½ï¿½Ð·Ö³ï¿½10ï¿½ï¿½ï¿½ï¿½
     void computeC(int level); // Circumference
     void computeCR(int level);
     void computeRSI_CVAI(int level);
