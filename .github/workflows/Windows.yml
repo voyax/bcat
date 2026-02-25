@@ -62,7 +62,10 @@ jobs:
       shell: bash
       run: |
         mkdir src/installer
-        mv MeshLab*-windows.exe  src/installer/
+        echo "Searching for installer exe..."
+        find . -name "MeshLab*-windows.exe" -type f
+        find . -name "MeshLab*-windows.exe" -type f -exec mv {} src/installer/ \;
+        ls -la src/installer/
     - name: Uploading MeshLab Portable
       uses: actions/upload-artifact@v4
       with:
