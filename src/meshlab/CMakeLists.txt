@@ -119,9 +119,9 @@ if (APPLE)
 		FILE ${MESHLAB_BUILD_DISTRIB_DIR}/meshlab.app/Contents/Info.plist)
 endif()
 
-# Copy LimeReport templates to build directory
+# Copy LimeReport templates and DLLs to build directory
 if(LIMEREPORT_FOUND)
-	file(COPY 
+	file(COPY
 		${CMAKE_CURRENT_SOURCE_DIR}/TalentLandReport.lrxml
 		${CMAKE_CURRENT_SOURCE_DIR}/TalentLandReportLight.lrxml
 		DESTINATION ${MESHLAB_BUILD_DISTRIB_DIR})
@@ -130,6 +130,20 @@ if(LIMEREPORT_FOUND)
 		${CMAKE_CURRENT_SOURCE_DIR}/TalentLandReportLight.lrxml
 		DESTINATION ${MESHLAB_BIN_INSTALL_DIR}
 		COMPONENT MeshLab)
+
+	# Deploy LimeReport runtime DLLs (Windows only)
+	if(WIN32)
+		set(LIMEREPORT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../external/limeReport)
+		file(COPY
+			${LIMEREPORT_DIR}/limereport.dll
+			${LIMEREPORT_DIR}/QtZint.dll
+			DESTINATION ${MESHLAB_BUILD_DISTRIB_DIR})
+		install(FILES
+			${LIMEREPORT_DIR}/limereport.dll
+			${LIMEREPORT_DIR}/QtZint.dll
+			DESTINATION ${MESHLAB_BIN_INSTALL_DIR}
+			COMPONENT MeshLab)
+	endif()
 endif()
 
 install(
