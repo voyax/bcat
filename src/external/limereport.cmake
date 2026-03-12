@@ -41,9 +41,9 @@ if(EXISTS "${LIMEREPORT_LIB}" AND EXISTS "${QTZINT_LIB}")
         INTERFACE_LINK_LIBRARIES "external-qtzint;Qt5::Widgets;Qt5::Xml;Qt5::Sql;Qt5::PrintSupport;Qt5::Script;Qt5::Svg"
     )
     
-    set(LIMEREPORT_FOUND TRUE)
+    set(LIMEREPORT_FOUND TRUE CACHE INTERNAL "LimeReport library found")
 else()
     message(STATUS "- LimeReport - prebuilt libraries not found, LimeReport features will be disabled")
     message(STATUS "  To enable LimeReport, place ${LIMEREPORT_LIB_NAME} and ${QTZINT_LIB_NAME} in ${LIMEREPORT_DIR}/")
-    set(LIMEREPORT_FOUND FALSE)
+    set(LIMEREPORT_FOUND FALSE CACHE INTERNAL "LimeReport library found")
 endif()
