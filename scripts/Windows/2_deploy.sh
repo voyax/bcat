@@ -31,6 +31,11 @@ if [ -f "$INSTALL_PATH/plugins/filter_sketchfab.dll" ]; then
     windeployqt $INSTALL_PATH/plugins/filter_sketchfab.dll --libdir $INSTALL_PATH/
 fi
 
+# Deploy LimeReport Qt dependencies if it exists
+if [ -f "$INSTALL_PATH/limereport.dll" ]; then
+    windeployqt $INSTALL_PATH/limereport.dll --libdir $INSTALL_PATH/
+fi
+
 # Move IFX files if they exist (from u3d library)
 if ls $INSTALL_PATH/lib/meshlab/IFX* 1> /dev/null 2>&1; then
     mv $INSTALL_PATH/lib/meshlab/IFX* $INSTALL_PATH
