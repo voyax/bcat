@@ -58,6 +58,10 @@ _deps
 *.dll
 *.dylib
 *.lib
+
+# LimeReport prebuilt libraries (exception to *.dll and *.lib rules)
+!src/external/limeReport/*.dll
+!src/external/limeReport/*.lib
 *.exe
 *.obj
 *.res
