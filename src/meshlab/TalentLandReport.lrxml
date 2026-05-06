@@ -3290,7 +3290,7 @@
                   <itemLocation Value="0" Type="enumAndFlags"/>
                   <stretchToMaxHeight Value="0" Type="bool"/>
                   <itemAlign Value="4" Type="enumAndFlags"/>
-                  <content Type="QString">建议佩戴矫正头盔矫正治疗</content>
+                  <content Type="QString">建议佩戴矫正头盔矫正</content>
                   <margin Value="4" Type="int"/>
                   <alignment Value="33" Type="enumAndFlags"/>
                   <autoWidth Value="0" Type="enumAndFlags"/>
@@ -6114,7 +6114,7 @@
               <children Type="Collection">
                 <item ClassName="TextItem" Type="Object">
                   <objectName Type="QString">TextItem4</objectName>
-                  <geometry y="10" x="750" width="358" height="88" Type="QRect"/>
+                  <geometry y="10" x="767" width="616" height="88" Type="QRect"/>
                   <children Type="Collection"/>
                   <zOrder Value="0" Type="qreal"/>
                   <borders Value="0" Type="enumAndFlags"/>
@@ -6126,9 +6126,9 @@
                   <itemLocation Value="0" Type="enumAndFlags"/>
                   <stretchToMaxHeight Value="0" Type="bool"/>
                   <itemAlign Value="4" Type="enumAndFlags"/>
-                  <content Type="QString">治疗前后对比</content>
+                  <content Type="QString">佩戴前后对比</content>
                   <margin Value="4" Type="int"/>
-                  <alignment Value="65" Type="enumAndFlags"/>
+                  <alignment Value="68" Type="enumAndFlags"/>
                   <autoWidth Value="0" Type="enumAndFlags"/>
                   <autoHeight Value="0" Type="bool"/>
                   <font weight="75" pointSize="16" italic="0" family="思源黑体 CN" underline="0" Type="QFont"/>

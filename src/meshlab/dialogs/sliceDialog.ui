@@ -260,7 +260,7 @@
          <item>
           <widget class="QCheckBox" name="checkBox_useHelmet">
            <property name="text">
-            <string>建议佩戴矫正头盔矫正治疗</string>
+            <string>建议佩戴矫正头盔矫正</string>
            </property>
           </widget>
          </item>
