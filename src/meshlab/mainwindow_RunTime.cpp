@@ -3914,8 +3914,17 @@ void MainWindow::slotExportReportHelper(bool simplified) {
 			report->dataManager()->setReportVariable("PSRPrev", QString::number(model_prev.measurement.psr * 100, 'f', 1));
 		}
 
-		// PAGE 5-15
-		// Set section analysis L2-L8
+		// PAGE 5: L0 ear-shift reference (section image only, no measurements table)
+		{
+			int levelWidth = 2850;
+			int levelHeight = 2370;
+			QImage l0Image(QSize(levelWidth, levelHeight), QImage::Format_RGB888);
+			l0Image.fill(QColor(239, 239, 239));
+			paintLevel(0, &l0Image, levelWidth, levelHeight, 24, this, true);
+			report->dataManager()->setReportVariable("L0SectionImage", l0Image);
+		}
+
+		// PAGE 6-11: Section analysis L2-L8
 		for (int i = 2; i < 9; i++) {
 			report->dataManager()->setReportVariable(QString("L").append(QString::number(i)).append("CFirst"), QString::number(model_first.measurement.c[i], 'f', 1));
 			report->dataManager()->setReportVariable(QString("L").append(QString::number(i)).append("WFirst"), QString::number(model_first.measurement.cr_W[i], 'f', 1));
